@@ -8,12 +8,12 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
 	
-	public float waitToIdle = 5;
-	//in seconds
+	public float waitToIdle = 5; //TODO: Time to wait to set idle anim to player.
 	public float velocity = 5;
 	public float turnSpeed = 10;
-	public int torchesToLightToOpenDoor;
-	
+
+
+	private int _torchesToLightToOpenDoor;
 	private int _torchesLighted = 0;
 	private bool _torchTriggerEntered = false;
 	private TorchController _torchController;
@@ -48,7 +48,8 @@ public class PlayerController : MonoBehaviour
 		_cameraController = GameObject.Find("Main Camera").GetComponent<CameraController>();
 		_doorAnimator = GameObject.Find ("Door.001").GetComponent<Animator> ();
 		_audioOpenDoor= GameObject.Find ("Door.001").GetComponent<AudioSource> ();
-	}
+        _torchesToLightToOpenDoor = GameObject.FindGameObjectsWithTag("LightStickOpenDoor").Length;
+    }
 
 	private void Loadlevel()
 	{
@@ -111,7 +112,7 @@ public class PlayerController : MonoBehaviour
 	private void OnTriggerEnter (Collider c)
 	{
 		//Collider with "Is Trigger" option checked.
-		if (c.CompareTag("Door") && _torchesLighted == torchesToLightToOpenDoor) {
+		if (c.CompareTag("Door") && _torchesLighted == _torchesToLightToOpenDoor) {
 			Loadlevel();
 		}
 		
@@ -164,7 +165,7 @@ public class PlayerController : MonoBehaviour
 		
 		
 		
-		if (_torchesLighted != torchesToLightToOpenDoor) yield break;
+		if (_torchesLighted != _torchesToLightToOpenDoor) yield break;
 		_cameraController.SetTarget(_cameraController.exitDoor);
 		_doorAnimator.SetBool (Open, true);
 		_audioOpenDoor.Play();
@@ -177,8 +178,12 @@ public class PlayerController : MonoBehaviour
 		_cameraController.SetTarget(_cameraController.player);
 	}
 
+    public int getTorchesToLightToOpenDoor() {
+        return _torchesToLightToOpenDoor;
+    }
 
-	/*void Idle(){
+
+    /*void Idle(){
 		string idle;
 		
 		if (Time.fixedTime % waitToIdle == 0 && !moving) {

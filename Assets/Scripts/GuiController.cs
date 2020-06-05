@@ -19,6 +19,6 @@ public class GuiController : MonoBehaviour
     private void OnGUI()
     {
         _lightedText.text = _playerController.GetTorchedLighted().ToString();
-        _totalText.text = _playerController.torchesToLightToOpenDoor.ToString();
+        _totalText.text = _playerController.getTorchesToLightToOpenDoor().ToString();
     }
 }
