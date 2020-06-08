@@ -1666,7 +1666,7 @@ GameObject:
   m_Component:
   - component: {fileID: 575247334}
   m_Layer: 0
-  m_Name: Torchs
+  m_Name: Torches
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1811,7 +1811,6 @@ MonoBehaviour:
   waitToIdle: 5
   velocity: 4
   turnSpeed: 50
-  torchesToLightToOpenDoor: 4
 --- !u!136 &771401964
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -3001,6 +3000,10 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 6043593749900494790f02d886eb1aa0, type: 3}
       propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: 6043593749900494790f02d886eb1aa0, type: 3}
+      propertyPath: m_TagString
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 6043593749900494790f02d886eb1aa0, type: 3}

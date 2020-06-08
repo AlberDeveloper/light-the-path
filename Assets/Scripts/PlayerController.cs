@@ -18,6 +18,7 @@ public class PlayerController : MonoBehaviour
 	private bool _torchTriggerEntered = false;
 	private TorchController _torchController;
 	private CameraController _cameraController;
+    private HintController _hintController;
 	private Vector2 _input;
 	private float _angle;
 	private Quaternion _targetRotation;
@@ -46,6 +47,7 @@ public class PlayerController : MonoBehaviour
 		_animator = GetComponent<Animator> ();
 		_audioFireIgnite = GetComponent<AudioSource>();
 		_cameraController = GameObject.Find("Main Camera").GetComponent<CameraController>();
+        _hintController = GameObject.Find("HintCanvas").GetComponent<HintController>();
 		_doorAnimator = GameObject.Find ("Door.001").GetComponent<Animator> ();
 		_audioOpenDoor= GameObject.Find ("Door.001").GetComponent<AudioSource> ();
         _torchesToLightToOpenDoor = GameObject.FindGameObjectsWithTag("LightStickOpenDoor").Length;
@@ -109,8 +111,24 @@ public class PlayerController : MonoBehaviour
 		transform.position += transform.forward * velocity * Time.deltaTime;
 	}
 
-	private void OnTriggerEnter (Collider c)
+    private void OnTriggerExit(Collider c)
+    {
+        //If we are out of hint zone, hide the level hint.
+        if (c.CompareTag("HintZone"))
+        {
+            Debug.Log("Im not in hint zone");
+            _hintController.hideHint();
+        }
+    }
+
+    private void OnTriggerEnter (Collider c)
 	{
+        //If we are in hint zone, show the level hint.
+        if (c.CompareTag("HintZone") && _torchesLighted < _torchesToLightToOpenDoor)
+        {
+            _hintController.showHint();
+        }
+
 		//Collider with "Is Trigger" option checked.
 		if (c.CompareTag("Door") && _torchesLighted == _torchesToLightToOpenDoor) {
 			Loadlevel();
