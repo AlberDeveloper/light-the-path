@@ -1,4 +1,4 @@
-# Light to the path
+# Light the path
 
 Mi first game with Unity 3D
 

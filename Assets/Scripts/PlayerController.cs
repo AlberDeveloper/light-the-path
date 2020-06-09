@@ -115,9 +115,8 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerExit(Collider c)
     {
         //If we are out of hint zone, hide the level hint.
-        if (c.CompareTag("HintZone"))
+        if (_hintController != null && c.CompareTag("HintZone"))
         {
-            Debug.Log("Im not in hint zone");
             _hintController.hideHint();
         }
     }
