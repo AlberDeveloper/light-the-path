@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -11,7 +9,7 @@ public class PlayerController : MonoBehaviour
 	public float waitToIdle = 5; //TODO: Time to wait to set idle anim to player.
 	public float velocity = 5;
 	public float turnSpeed = 10;
-
+    public LevelLoader levelLoader;
 
 	private int _torchesToLightToOpenDoor;
 	private int _torchesLighted = 0;
@@ -47,7 +45,10 @@ public class PlayerController : MonoBehaviour
 		_animator = GetComponent<Animator> ();
 		_audioFireIgnite = GetComponent<AudioSource>();
 		_cameraController = GameObject.Find("Main Camera").GetComponent<CameraController>();
-        _hintController = GameObject.Find("HintCanvas").GetComponent<HintController>();
+        if (GameObject.Find("HintCanvas") != null)
+        {
+            _hintController = GameObject.Find("HintCanvas").GetComponent<HintController>();
+        }
 		_doorAnimator = GameObject.Find ("Door.001").GetComponent<Animator> ();
 		_audioOpenDoor= GameObject.Find ("Door.001").GetComponent<AudioSource> ();
         _torchesToLightToOpenDoor = GameObject.FindGameObjectsWithTag("LightStickOpenDoor").Length;
@@ -55,7 +56,7 @@ public class PlayerController : MonoBehaviour
 
 	private void Loadlevel()
 	{
-		SceneManager.LoadScene("congrats");
+        levelLoader.FadeToNextLevel();
 	}
 
 	private void Update ()
@@ -124,13 +125,13 @@ public class PlayerController : MonoBehaviour
     private void OnTriggerEnter (Collider c)
 	{
         //If we are in hint zone, show the level hint.
-        if (c.CompareTag("HintZone") && _torchesLighted < _torchesToLightToOpenDoor)
+        if (_hintController != null && c.CompareTag("HintZone") && _torchesLighted < _torchesToLightToOpenDoor)
         {
             _hintController.showHint();
         }
 
 		//Collider with "Is Trigger" option checked.
-		if (c.CompareTag("Door") && _torchesLighted == _torchesToLightToOpenDoor) {
+		if (c.CompareTag("Door") && levelComplete()) {
 			Loadlevel();
 		}
 		
@@ -183,7 +184,7 @@ public class PlayerController : MonoBehaviour
 		
 		
 		
-		if (_torchesLighted != _torchesToLightToOpenDoor) yield break;
+		if (!levelComplete()) yield break;
 		_cameraController.SetTarget(_cameraController.exitDoor);
 		_doorAnimator.SetBool (Open, true);
 		_audioOpenDoor.Play();
@@ -198,6 +199,10 @@ public class PlayerController : MonoBehaviour
 
     public int getTorchesToLightToOpenDoor() {
         return _torchesToLightToOpenDoor;
+    }
+
+    public bool levelComplete() {
+        return _torchesToLightToOpenDoor == _torchesLighted;
     }
 
 
