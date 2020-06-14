@@ -14,7 +14,9 @@ public class PlayerController : MonoBehaviour
 	private int _torchesToLightToOpenDoor;
 	private int _torchesLighted = 0;
 	private bool _torchTriggerEntered = false;
-	private TorchController _torchController;
+    private bool _isLightingAction = false;
+
+    private TorchController _torchController;
 	private CameraController _cameraController;
     private HintController _hintController;
 	private Vector2 _input;
@@ -61,19 +63,25 @@ public class PlayerController : MonoBehaviour
 
 	private void Update ()
 	{
+        //Don't do nothing while the player is lighting a torch
+         if (_animator.GetCurrentAnimatorStateInfo (0).IsTag ("Lighting") || _isLightingAction)
+            return;
+
+        //Check if the player pressed 'space' in front of a torch and light it if can.
+        LightTorch ();
+
+        ///Get input keys (move keys) and check if the player is moving or not.
 		GetInput ();
-		LightTorch ();
-		if (_animator.GetCurrentAnimatorStateInfo (0).IsTag ("Lighting"))
-			return;
 		if (Mathf.Abs (_input.x) < 1 && Mathf.Abs (_input.y) < 1) {
 			_animator.SetBool (IsWalking, false);
 			return;
 		}
-		CalculateDirection ();
+        _animator.SetBool(IsWalking, true);
+
+        //Camera and movement actions.
+        CalculateDirection ();
 		Rotate ();
 		Move ();
-		_animator.SetBool (IsWalking, true);
-
 	}
 
 	/// <summary>
@@ -85,10 +93,11 @@ public class PlayerController : MonoBehaviour
 		_input.y = Input.GetAxisRaw ("Vertical");
 	}
 
-	/// <summary>
-	/// Direction relative to the camera's rotation
-	/// </summary>
-	private void CalculateDirection ()
+
+    /// <summary>
+    /// Direction relative to the camera's rotation
+    /// </summary>
+    private void CalculateDirection ()
 	{
 		_angle = Mathf.Atan2 (_input.x, _input.y);
 		_angle = Mathf.Rad2Deg * _angle;
@@ -169,21 +178,24 @@ public class PlayerController : MonoBehaviour
 
 	private IEnumerator TorchControllerLight ()
 	{
-		//Wait 1.5 seconds to light the torch.
-		yield return new WaitForSeconds(1.5f);
-		
-		//Light the torch and increment torchesLighted var.
-		_torchController.Lighting ();
+
+        _isLightingAction = true;
+
+        //Wait 1.5 seconds to light the torch.
+        yield return new WaitForSeconds(1.5f);
+
+        //Light the torch and increment torchesLighted var.
+        _torchController.Lighting ();
 		_torchesLighted++;
 		
 
 		//Reset torchTriggerEntered and tController vars.
 		_torchTriggerEntered = false;
 		_torchController = null;
-		
-		
-		
-		if (!levelComplete()) yield break;
+        
+        _isLightingAction = false;
+
+        if (!levelComplete()) yield break;
 		_cameraController.SetTarget(_cameraController.exitDoor);
 		_doorAnimator.SetBool (Open, true);
 		_audioOpenDoor.Play();
