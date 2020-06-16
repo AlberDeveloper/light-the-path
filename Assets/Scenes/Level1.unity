@@ -96,7 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
-  m_LightingDataAsset: {fileID: 112000000, guid: 4778f2123b303ea4994fea5c35aa770c,
+  m_LightingDataAsset: {fileID: 112000000, guid: 32ead63e189704248bac1c89c4b57593,
     type: 2}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -251,8 +251,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551525}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066395}
+  m_Size: {x: 0.64929676, y: 1.4444053, z: 1.9551525}
+  m_Center: {x: 0.13918638, y: 0.72169673, z: 0.00000050945556}
 --- !u!4 &60819866
 Transform:
   m_ObjectHideFlags: 0
@@ -830,8 +830,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3929766, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0.10817773, y: 0.72169673, z: 0.00000047975715}
+  m_Size: {x: 0.5034414, y: 1.4444053, z: 1.9551524}
+  m_Center: {x: 0.052945323, y: 0.72169673, z: 0.00000047975715}
 --- !u!1 &390113203
 GameObject:
   m_ObjectHideFlags: 0
@@ -1014,8 +1014,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551525}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066395}
+  m_Size: {x: 0.5034414, y: 1.4444053, z: 1.9551524}
+  m_Center: {x: 0.052945323, y: 0.72169673, z: 0.00000047975715}
 --- !u!1 &425027906 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: 161e026653300e84db5ddd2f076e7392,
@@ -8288,8 +8288,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551525}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066395}
+  m_Size: {x: 0.5034414, y: 1.4444053, z: 1.9551524}
+  m_Center: {x: 0.052945323, y: 0.72169673, z: 0.00000047975715}
 --- !u!1001 &1234794050
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8777,8 +8777,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551525}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066395}
+  m_Size: {x: 0.5034414, y: 1.4444053, z: 1.9551524}
+  m_Center: {x: 0.052945323, y: 0.72169673, z: 0.00000047975715}
 --- !u!1 &1381656704
 GameObject:
   m_ObjectHideFlags: 0
@@ -11200,6 +11200,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023502835788772017, guid: 77abacfe094863a469a199995ec4b70c,
+        type: 3}
+      propertyPath: m_Size.z
+      value: 4.512951
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023502835788772017, guid: 77abacfe094863a469a199995ec4b70c,
+        type: 3}
+      propertyPath: m_Center.x
+      value: -0.102838635
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023502835788772017, guid: 77abacfe094863a469a199995ec4b70c,
+        type: 3}
+      propertyPath: m_Center.z
+      value: 0.2650683
+      objectReference: {fileID: 0}
+    - target: {fileID: 6023502835788772017, guid: 77abacfe094863a469a199995ec4b70c,
+        type: 3}
+      propertyPath: m_Size.x
+      value: 0.5616231
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 77abacfe094863a469a199995ec4b70c, type: 3}
