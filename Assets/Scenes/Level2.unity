@@ -233,8 +233,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.89355475, y: 1, z: 2.0143464}
-  m_Center: {x: -0.15769956, y: 0, z: -0.012539506}
+  m_Size: {x: 0.89355475, y: 1.6198239, z: 1.928184}
+  m_Center: {x: -0.15769956, y: 0.30991197, z: 0.030541658}
 --- !u!1 &24876442 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
@@ -456,8 +456,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2.0625362, y: 1, z: 1.4438438}
-  m_Center: {x: 0.23537159, y: 0, z: 0.047074318}
+  m_Size: {x: 1.96774, y: 1.8188295, z: 1.3962116}
+  m_Center: {x: 0.28276968, y: 0.40941477, z: 0.07089043}
 --- !u!1 &63027969
 GameObject:
   m_ObjectHideFlags: 0
@@ -504,8 +504,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.0291486, y: 1, z: 2.2278652}
-  m_Center: {x: -0.17489457, y: 0, z: -0.27706718}
+  m_Size: {x: 1.0291486, y: 1.7909694, z: 2.2278652}
+  m_Center: {x: -0.17489457, y: 0.3954847, z: -0.27706718}
 --- !u!4 &67314430 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8266949716707585787, guid: d2767e26d677cb64ab2f9b09c1f4f1c7,
@@ -3962,8 +3962,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.3352345, y: 1.6722414, z: 1.857085}
-  m_Center: {x: 0, y: 0.8361207, z: 0}
+  m_Size: {x: 0.4235525, y: 1.6722414, z: 2.1378937}
+  m_Center: {x: 0.04415901, y: 0.8361207, z: -0.037710905}
 --- !u!4 &837363054 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4238827022925968, guid: e34b2cdb735286740bad5f7fa5938848,
@@ -6409,8 +6409,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.89086175, y: 0.46693894, z: 1.8570845}
-  m_Center: {x: -0.00000047683716, y: 0.2334695, z: 0}
+  m_Size: {x: 1.2801354, y: 1.6219789, z: 2.0915754}
+  m_Center: {x: -0.00000047683716, y: 0.81098944, z: 0}
 --- !u!4 &1409867230 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4213827852679738, guid: 6c90e727086144341b08e55205e9c43d,
