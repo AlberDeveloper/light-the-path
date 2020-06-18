@@ -443,7 +443,7 @@ Transform:
   - {fileID: 243029858}
   - {fileID: 435743032}
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &62400704
 BoxCollider:
@@ -895,7 +895,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &182417528
 PrefabInstance:
@@ -910,7 +910,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.2899127
+      value: -0.59
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -938,7 +938,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -951,6 +951,11 @@ PrefabInstance:
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754613839155186, guid: 4983c8b2a7f84874797fd0b19fbee7e8,
+        type: 3}
+      propertyPath: torchId
+      value: 6
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
@@ -1067,7 +1072,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1159140999270826, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_Name
-      value: ActivationDoorTorch
+      value: ActivationDoorTorch (1)
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1112,6 +1117,11 @@ PrefabInstance:
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754613839155186, guid: 4983c8b2a7f84874797fd0b19fbee7e8,
+        type: 3}
+      propertyPath: torchId
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
@@ -1323,7 +1333,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1159140999270826, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_Name
-      value: ActivationDoorTorch (5)
+      value: ActivationDoorTorch (7)
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1355,7 +1365,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1368,6 +1378,11 @@ PrefabInstance:
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754613839155186, guid: 4983c8b2a7f84874797fd0b19fbee7e8,
+        type: 3}
+      propertyPath: torchId
+      value: 7
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
@@ -1615,7 +1630,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1159140999270826, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_Name
-      value: ActivationDoorTorch (7)
+      value: ActivationDoorTorch (8)
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1661,6 +1676,11 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114754613839155186, guid: 4983c8b2a7f84874797fd0b19fbee7e8,
+        type: 3}
+      propertyPath: torchId
+      value: 8
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
 --- !u!4 &320160290 stripped
@@ -1678,7 +1698,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1159140999270826, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_Name
-      value: ActivationDoorTorch (4)
+      value: ActivationDoorTorch (3)
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1710,7 +1730,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1723,6 +1743,11 @@ PrefabInstance:
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754613839155186, guid: 4983c8b2a7f84874797fd0b19fbee7e8,
+        type: 3}
+      propertyPath: torchId
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
@@ -2227,11 +2252,11 @@ Transform:
   m_Children:
   - {fileID: 217080397}
   - {fileID: 1852875464}
-  - {fileID: 2057758772}
-  - {fileID: 2062210069}
   - {fileID: 328352199}
-  - {fileID: 248315029}
+  - {fileID: 2062210069}
+  - {fileID: 2057758772}
   - {fileID: 182417529}
+  - {fileID: 248315029}
   - {fileID: 320160290}
   - {fileID: 2097196694}
   m_Father: {fileID: 0}
@@ -5231,7 +5256,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1168317440
 PrefabInstance:
@@ -7162,7 +7187,7 @@ Transform:
   m_LocalScale: {x: 6.9131427, y: 1, z: 2.5679}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1600137378
 GameObject:
@@ -7673,7 +7698,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1159140999270826, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_Name
-      value: ActivationDoorTorch (1)
+      value: ActivationDoorTorch (2)
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7718,6 +7743,11 @@ PrefabInstance:
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754613839155186, guid: 4983c8b2a7f84874797fd0b19fbee7e8,
+        type: 3}
+      propertyPath: torchId
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
@@ -8337,7 +8367,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1159140999270826, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_Name
-      value: ActivationDoorTorch (2)
+      value: ActivationDoorTorch (5)
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8369,7 +8399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8382,6 +8412,11 @@ PrefabInstance:
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754613839155186, guid: 4983c8b2a7f84874797fd0b19fbee7e8,
+        type: 3}
+      propertyPath: torchId
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
@@ -8400,7 +8435,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1159140999270826, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_Name
-      value: ActivationDoorTorch (3)
+      value: ActivationDoorTorch (4)
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8445,6 +8480,11 @@ PrefabInstance:
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754613839155186, guid: 4983c8b2a7f84874797fd0b19fbee7e8,
+        type: 3}
+      propertyPath: torchId
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
@@ -8616,7 +8656,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1159140999270826, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_Name
-      value: ActivationDoorTorch (8)
+      value: ActivationDoorTorch (9)
       objectReference: {fileID: 0}
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8661,6 +8701,11 @@ PrefabInstance:
     - target: {fileID: 4266370953447154, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 114754613839155186, guid: 4983c8b2a7f84874797fd0b19fbee7e8,
+        type: 3}
+      propertyPath: torchId
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4983c8b2a7f84874797fd0b19fbee7e8, type: 3}
