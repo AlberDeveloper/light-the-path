@@ -54,12 +54,13 @@ public class PlayerController : MonoBehaviour
 		_audioOpenDoor= GameObject.Find ("Door.001").GetComponent<AudioSource> ();
         _torchesToLightToOpenDoor = GameObject.FindGameObjectsWithTag("LightStickOpenDoor").Length;
         _analyticsController = GetComponent<AnalyticsController>();
+        _analyticsController.setLevel(levelLoader.GetCurrentLevel());
     }
 
 	private void Loadlevel()
 	{
         //Register time to complete the level.
-        _analyticsController.LevelComplete(levelLoader.GetCurrentLevel());
+        _analyticsController.LevelComplete();
         levelLoader.FadeToNextLevel();
 	}
 
@@ -191,7 +192,7 @@ public class PlayerController : MonoBehaviour
 		_torchesLighted++;
 
         //Register from this level wich torch
-        _analyticsController.TorchLighted(levelLoader.GetCurrentLevel(), _torchController.torchId);
+        _analyticsController.TorchLighted(_torchController.torchId);
 
 
         //Reset torchTriggerEntered and tController vars.

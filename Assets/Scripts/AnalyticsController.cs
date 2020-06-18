@@ -4,25 +4,29 @@ using UnityEngine.Analytics;
 
 public class AnalyticsController : MonoBehaviour
 {
+    private int _level;
 
-    void Start()
-    {
-        AnalyticsEvent.Custom("game_start", new Dictionary<string, object> { });
+    public void setLevel(int level) {
+        _level = level;
     }
 
-    public void TorchLighted(int level, int torchID) {
+    public void LevelStart()
+    {
+        AnalyticsEvent.LevelStart(_level);
+    }
+
+    public void TorchLighted(int torchID) {
         AnalyticsEvent.Custom("torch_lighted", new Dictionary<string, object>
         {
-            { "level", level },
+            { "level", _level },
             { "torch_id", torchID },
             { "time_elapsed", Time.timeSinceLevelLoad }
         });
     }
 
-    public void LevelComplete(int level) {
-        AnalyticsEvent.Custom("level_complete", new Dictionary<string, object>
+    public void LevelComplete() {
+        AnalyticsEvent.LevelComplete(_level, new Dictionary<string, object>
         {
-            { "level", level },
             { "time_elapsed", Time.timeSinceLevelLoad }
         });
     }
