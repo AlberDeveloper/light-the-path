@@ -1,5 +1,4 @@
 ﻿using UnityEngine;
-using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
 
 public class LevelLoader : MonoBehaviour
@@ -10,7 +9,7 @@ public class LevelLoader : MonoBehaviour
 
     public void FadeToNextLevel()
     {
-        FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+        FadeToLevel(GetCurrentLevel() + 1);
     }
 
     public void FadeToLevel(int levelIndex) {
@@ -20,5 +19,9 @@ public class LevelLoader : MonoBehaviour
 
     public void OnFadeComplete() {
         SceneManager.LoadScene(_levelToLoad);
+    }
+
+    public int GetCurrentLevel() {
+        return SceneManager.GetActiveScene().buildIndex;
     }
 }

@@ -1,7 +1,5 @@
 ﻿using System.Collections;
 using UnityEngine;
-using UnityEngine.SceneManagement;
-
 
 public class PlayerController : MonoBehaviour
 {
@@ -27,6 +25,7 @@ public class PlayerController : MonoBehaviour
 	private Animator _doorAnimator;
 	private AudioSource _audioFireIgnite;
 	private AudioSource _audioOpenDoor;
+    private AnalyticsController _analyticsController;
 	
 	private static readonly int LightTorchAnimation = Animator.StringToHash("LightTorch");
 	private static readonly int Open = Animator.StringToHash("Open");
@@ -54,10 +53,13 @@ public class PlayerController : MonoBehaviour
 		_doorAnimator = GameObject.Find ("Door.001").GetComponent<Animator> ();
 		_audioOpenDoor= GameObject.Find ("Door.001").GetComponent<AudioSource> ();
         _torchesToLightToOpenDoor = GameObject.FindGameObjectsWithTag("LightStickOpenDoor").Length;
+        _analyticsController = GetComponent<AnalyticsController>();
     }
 
 	private void Loadlevel()
 	{
+        //Register time to complete the level.
+        _analyticsController.LevelComplete(levelLoader.GetCurrentLevel());
         levelLoader.FadeToNextLevel();
 	}
 
@@ -187,10 +189,13 @@ public class PlayerController : MonoBehaviour
         //Light the torch and increment torchesLighted var.
         _torchController.Lighting ();
 		_torchesLighted++;
-		
 
-		//Reset torchTriggerEntered and tController vars.
-		_torchTriggerEntered = false;
+        //Register from this level wich torch
+        _analyticsController.TorchLighted(levelLoader.GetCurrentLevel(), _torchController.torchId);
+
+
+        //Reset torchTriggerEntered and tController vars.
+        _torchTriggerEntered = false;
 		_torchController = null;
         
         _isLightingAction = false;
