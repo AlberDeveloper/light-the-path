@@ -96,6 +96,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigmaAO: 1
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
+    m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
   m_UseShadowmask: 1
 --- !u!196 &4
@@ -212,7 +213,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21294971}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.89, y: 0, z: 3.75}
+  m_LocalPosition: {x: -0.89, y: 0, z: 11.54}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 857066642}
@@ -235,25 +236,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.89355475, y: 1.6198239, z: 1.928184}
   m_Center: {x: -0.15769956, y: 0.30991197, z: 0.030541658}
---- !u!1 &24876442 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 405831924}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &24876443
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 24876442}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!4 &24876446 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5,
@@ -564,11 +546,10 @@ MonoBehaviour:
   m_Material: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 1
+  m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
-      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 20
@@ -651,6 +632,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -694,6 +676,10 @@ PrefabInstance:
     - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -751,25 +737,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 130061001}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &130061003 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 130061001}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &130061004
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 130061003}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!1 &146797045
 GameObject:
   m_ObjectHideFlags: 0
@@ -982,6 +949,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.06
@@ -1038,25 +1009,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 196395798}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &196395800 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 196395798}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &196395801
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 196395800}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!4 &202663109 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4646888661230560, guid: 204d65f50fe5aa24fb64902fc24e857b,
@@ -1142,6 +1094,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.9431
@@ -1198,25 +1154,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 230046192}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &230046194 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 230046192}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &230046195
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 230046194}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!1 &243029857 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5200681163900939743, guid: cf810cd0bd7e56145b3aaf6e366bfc13,
@@ -1252,6 +1189,10 @@ PrefabInstance:
     - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1305,25 +1246,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 243805727}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &243805729 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864,
-    type: 3}
-  m_PrefabInstance: {fileID: 243805727}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &243805730
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 243805729}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.86968607, y: 1.911628, z: 0.9228997}
-  m_Center: {x: 0.019209895, y: 0.9562825, z: -0.015293065}
 --- !u!1001 &248315028
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1466,6 +1388,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (16)
       objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -9.9431
@@ -1522,25 +1448,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 289033127}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &289033129 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 289033127}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &289033130
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 289033129}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!1 &298277790
 GameObject:
   m_ObjectHideFlags: 0
@@ -1602,25 +1509,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &309435171 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1154995300056566, guid: 594e3ebfdb8158a43a98466d63302b4d,
-    type: 3}
-  m_PrefabInstance: {fileID: 891006073}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &309435175
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 309435171}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.5175094, y: 1.4444053, z: 2.5754275}
-  m_Center: {x: 0.03987935, y: 0.72169673, z: -0.0033852363}
 --- !u!1001 &320160289
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1764,6 +1652,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62400703}
     m_Modifications:
+    - target: {fileID: 5200681163900939742, guid: cf810cd0bd7e56145b3aaf6e366bfc13,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5200681163900939743, guid: cf810cd0bd7e56145b3aaf6e366bfc13,
         type: 3}
       propertyPath: m_Name
@@ -1838,11 +1731,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalScale.z
       value: 100.00018
-      objectReference: {fileID: 0}
-    - target: {fileID: 5200681163900939742, guid: cf810cd0bd7e56145b3aaf6e366bfc13,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5200681163900939742, guid: cf810cd0bd7e56145b3aaf6e366bfc13, type: 3}
@@ -2041,6 +1929,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone_Corner (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.69
@@ -2093,25 +1985,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 394663422}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &394663424 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864,
-    type: 3}
-  m_PrefabInstance: {fileID: 394663422}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &394663425
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 394663424}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8696859, y: 1.911628, z: 0.9228995}
-  m_Center: {x: 0.019209892, y: 0.9562825, z: -0.015293062}
 --- !u!1001 &405831924
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2122,6 +1995,10 @@ PrefabInstance:
     - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2173,25 +2050,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
---- !u!1 &406642287 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864,
-    type: 3}
-  m_PrefabInstance: {fileID: 1902076219}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &406642288
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 406642287}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.86968607, y: 1.911628, z: 0.9228997}
-  m_Center: {x: 0.019209895, y: 0.9562825, z: -0.015293065}
 --- !u!4 &406642290 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864,
@@ -2300,25 +2158,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &481430077 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864,
-    type: 3}
-  m_PrefabInstance: {fileID: 629994488}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &481430078
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 481430077}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8696859, y: 1.911628, z: 0.9228995}
-  m_Center: {x: 0.019209892, y: 0.9562825, z: -0.015293062}
 --- !u!4 &481430080 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864,
@@ -2391,6 +2230,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -2618,6 +2458,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.3453
@@ -2668,25 +2512,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
---- !u!1 &541814868 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864,
-    type: 3}
-  m_PrefabInstance: {fileID: 1629969341}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &541814869
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 541814868}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.86968607, y: 1.911628, z: 0.9228997}
-  m_Center: {x: 0.019209895, y: 0.9562825, z: -0.015293065}
 --- !u!4 &541814871 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864,
@@ -2703,6 +2528,10 @@ PrefabInstance:
     - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2765,6 +2594,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62400703}
     m_Modifications:
+    - target: {fileID: 5200681163900939742, guid: cf810cd0bd7e56145b3aaf6e366bfc13,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5200681163900939743, guid: cf810cd0bd7e56145b3aaf6e366bfc13,
         type: 3}
       propertyPath: m_Name
@@ -2830,11 +2664,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.x
       value: 100
       objectReference: {fileID: 0}
-    - target: {fileID: 5200681163900939742, guid: cf810cd0bd7e56145b3aaf6e366bfc13,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5200681163900939742, guid: cf810cd0bd7e56145b3aaf6e366bfc13, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cf810cd0bd7e56145b3aaf6e366bfc13, type: 3}
@@ -2848,6 +2677,10 @@ PrefabInstance:
     - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2901,25 +2734,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 571493684}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &571493686 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864,
-    type: 3}
-  m_PrefabInstance: {fileID: 571493684}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &571493687
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 571493686}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8696859, y: 1.911628, z: 0.9228995}
-  m_Center: {x: 0.019209892, y: 0.9562825, z: -0.015293062}
 --- !u!1001 &572065989
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2930,6 +2744,10 @@ PrefabInstance:
     - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (18)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2987,25 +2805,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 572065989}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &572065991 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 572065989}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &572065992
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 572065991}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!1001 &576116333
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3129,6 +2928,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3178,6 +2978,10 @@ PrefabInstance:
     - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3235,6 +3039,10 @@ PrefabInstance:
     - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3297,6 +3105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.3028994
@@ -3353,25 +3165,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 693329858}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &693329860 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 693329858}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &693329861
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 693329860}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!1 &698869438
 GameObject:
   m_ObjectHideFlags: 0
@@ -3420,6 +3213,10 @@ PrefabInstance:
     - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3473,25 +3270,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 755880597}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &755880599 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864,
-    type: 3}
-  m_PrefabInstance: {fileID: 755880597}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &755880600
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 755880599}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8696859, y: 1.911628, z: 0.9228995}
-  m_Center: {x: 0.019209892, y: 0.9562825, z: -0.015293062}
 --- !u!1001 &779207474
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3615,6 +3393,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -3842,6 +3621,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone_Corner (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.69
@@ -3894,25 +3677,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 813191574}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &813191576 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864,
-    type: 3}
-  m_PrefabInstance: {fileID: 813191574}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &813191577
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 813191576}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8696859, y: 1.911628, z: 0.9228995}
-  m_Center: {x: 0.019209892, y: 0.9562825, z: -0.015293062}
 --- !u!1001 &819602417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4055,6 +3819,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4211,6 +3976,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4254,6 +4020,10 @@ PrefabInstance:
     - target: {fileID: 1154995300056566, guid: 594e3ebfdb8158a43a98466d63302b4d, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Window
+      objectReference: {fileID: 0}
+    - target: {fileID: 1154995300056566, guid: 594e3ebfdb8158a43a98466d63302b4d, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4501257356077416, guid: 594e3ebfdb8158a43a98466d63302b4d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4448,6 +4218,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -5.9163
@@ -4504,25 +4278,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 946927859}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &946927861 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 946927859}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &946927862
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 946927861}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!1001 &1018152336
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4533,6 +4288,10 @@ PrefabInstance:
     - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4590,25 +4349,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1018152336}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1018152338 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1018152336}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1018152339
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1018152338}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!4 &1022639371 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 820375176021514286, guid: d87974824f9b2e644a44a0113feb0eea,
@@ -4625,6 +4365,10 @@ PrefabInstance:
     - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4676,25 +4420,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
---- !u!1 &1034239754 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1034239753}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1034239755
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1034239754}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!4 &1034239758 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5,
@@ -4711,6 +4436,10 @@ PrefabInstance:
     - target: {fileID: 1048753352154994, guid: 778e8f7ae29766247b21c2c7ea8c87b6, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048753352154994, guid: 778e8f7ae29766247b21c2c7ea8c87b6, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4248846288640394, guid: 778e8f7ae29766247b21c2c7ea8c87b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4769,6 +4498,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -2.838
@@ -4823,25 +4556,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
---- !u!1 &1061745031 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1294200507}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1061745032
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061745031}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!4 &1061745035 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5,
@@ -4960,31 +4674,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26a1158ae3a90c44a98e1d23b2026e5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1098346365 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 549401989}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1098346366 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5,
     type: 3}
   m_PrefabInstance: {fileID: 549401989}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1098346367
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1098346365}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!1001 &1119190282
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5146,6 +4841,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -5268,6 +4964,10 @@ PrefabInstance:
     - target: {fileID: 1048753352154994, guid: 778e8f7ae29766247b21c2c7ea8c87b6, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1048753352154994, guid: 778e8f7ae29766247b21c2c7ea8c87b6, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4248846288640394, guid: 778e8f7ae29766247b21c2c7ea8c87b6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5405,6 +5105,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.209
@@ -5465,50 +5169,12 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1194544682}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1194544684 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1194544682}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1194544685
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194544684}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
---- !u!1 &1215848476 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1056685488}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1215848477 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5,
     type: 3}
   m_PrefabInstance: {fileID: 1056685488}
   m_PrefabAsset: {fileID: 0}
---- !u!65 &1215848478
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1215848476}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!1001 &1229389092
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5632,6 +5298,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -5672,11 +5339,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 8580534914145669817, guid: e0bfeb7924880c0469b3f2a26c7ebe88,
-        type: 3}
-      propertyPath: m_Name
-      value: MainCanvas
-      objectReference: {fileID: 0}
     - target: {fileID: 8580534914145669813, guid: e0bfeb7924880c0469b3f2a26c7ebe88,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -5782,6 +5444,11 @@ PrefabInstance:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 8580534914145669817, guid: e0bfeb7924880c0469b3f2a26c7ebe88,
+        type: 3}
+      propertyPath: m_Name
+      value: MainCanvas
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e0bfeb7924880c0469b3f2a26c7ebe88, type: 3}
 --- !u!1001 &1264619712
@@ -5794,6 +5461,10 @@ PrefabInstance:
     - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner (6)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5847,25 +5518,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1264619712}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1264619714 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864,
-    type: 3}
-  m_PrefabInstance: {fileID: 1264619712}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1264619715
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1264619714}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8696859, y: 1.911628, z: 0.9228995}
-  m_Center: {x: 0.019209892, y: 0.9562825, z: -0.015293062}
 --- !u!1001 &1275037587
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5873,6 +5525,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 62400703}
     m_Modifications:
+    - target: {fileID: 5200681163900939742, guid: cf810cd0bd7e56145b3aaf6e366bfc13,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5200681163900939743, guid: cf810cd0bd7e56145b3aaf6e366bfc13,
         type: 3}
       propertyPath: m_Name
@@ -5943,11 +5600,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 100.00018
       objectReference: {fileID: 0}
-    - target: {fileID: 5200681163900939742, guid: cf810cd0bd7e56145b3aaf6e366bfc13,
-        type: 3}
-      propertyPath: m_Convex
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5200681163900939742, guid: cf810cd0bd7e56145b3aaf6e366bfc13, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cf810cd0bd7e56145b3aaf6e366bfc13, type: 3}
@@ -5961,6 +5613,10 @@ PrefabInstance:
     - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6092,6 +5748,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone_Corner (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_LocalPosition.x
       value: -6.99
@@ -6144,25 +5804,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1343302730}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1343302732 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864,
-    type: 3}
-  m_PrefabInstance: {fileID: 1343302730}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1343302733
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1343302732}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.86968607, y: 1.911628, z: 0.9228997}
-  m_Center: {x: 0.019209895, y: 0.9562825, z: -0.015293065}
 --- !u!1001 &1346471685
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6173,6 +5814,10 @@ PrefabInstance:
     - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_Name
       value: Wall_Stone_Normal (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6224,25 +5869,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
---- !u!1 &1346471686 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1346471685}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1346471687
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1346471686}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!4 &1346471690 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5,
@@ -6495,6 +6121,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 4294967295
   m_RendererPriority: 0
   m_Materials:
@@ -6558,9 +6185,9 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
-  m_CookingOptions: 14
+  m_CookingOptions: 30
   m_Mesh: {fileID: 4300002, guid: 908e1d3bb7e6f104bb40ca1216e88c4e, type: 3}
 --- !u!65 &1410759802
 BoxCollider:
@@ -6814,6 +6441,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -4.3028994
@@ -6870,25 +6501,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1499035556}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1499035558 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1499035556}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1499035559
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1499035558}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!1001 &1545627818
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6975,25 +6587,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92ccb6c8276746746bdd04462b39cf56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &1553786913 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 541435128}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1553786914
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1553786913}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!4 &1553786917 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5,
@@ -7010,6 +6603,10 @@ PrefabInstance:
     - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7063,25 +6660,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1555292608}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1555292610 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864,
-    type: 3}
-  m_PrefabInstance: {fileID: 1555292608}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1555292611
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1555292610}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8696859, y: 1.911628, z: 0.9228995}
-  m_Center: {x: 0.019209892, y: 0.9562825, z: -0.015293062}
 --- !u!1001 &1572169457
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7249,6 +6827,7 @@ MeshRenderer:
   m_MotionVectors: 1
   m_LightProbeUsage: 0
   m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -7355,6 +6934,10 @@ PrefabInstance:
     - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7487,25 +7070,6 @@ Transform:
   m_Father: {fileID: 4586469}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1774150563 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864,
-    type: 3}
-  m_PrefabInstance: {fileID: 1813382161}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1774150564
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1774150563}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8696859, y: 1.911628, z: 0.9228995}
-  m_Center: {x: 0.019209892, y: 0.9562825, z: -0.015293062}
 --- !u!4 &1774150566 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864,
@@ -7643,6 +7207,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Pillar_Stone_Corner (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_LocalPosition.x
       value: 6.9530325
@@ -7767,6 +7335,10 @@ PrefabInstance:
     - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_Name
       value: Pillar_Stone_Corner (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 1690488025604890, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 4190063031780046, guid: 469c641b7a722104e9abdfa9a4ec1864, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8008,6 +7580,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.9163
@@ -8064,25 +7640,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1961287605}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1961287607 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1961287605}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1961287608
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1961287607}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!1001 &1976612300
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8157,6 +7714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.4518001
@@ -8213,25 +7774,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1999554164}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1999554166 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 1999554164}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &1999554167
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1999554166}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!1001 &2008769057
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8505,6 +8047,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall_Stone_Normal (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 1.4518
@@ -8565,25 +8111,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2062944577}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2062944579 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 2062944577}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &2062944580
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2062944579}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!1001 &2067182250
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8778,25 +8305,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2114259181}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2124833090 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1784612528550548, guid: 31f59044589af8046baeda4851e3b9d5,
-    type: 3}
-  m_PrefabInstance: {fileID: 663734063}
-  m_PrefabAsset: {fileID: 0}
---- !u!65 &2124833091
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2124833090}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551524}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066394}
 --- !u!4 &2124833094 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4315287027980304, guid: 31f59044589af8046baeda4851e3b9d5,
