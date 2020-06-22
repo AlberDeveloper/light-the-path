@@ -816,7 +816,13 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.4908705
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 1738058088790040271, guid: 31f59044589af8046baeda4851e3b9d5,
+        type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: 31f59044589af8046baeda4851e3b9d5, type: 3}
 --- !u!4 &307414972 stripped
 Transform:
@@ -3019,8 +3025,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1054976896}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 3.363, y: 0, z: 7.776}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 3.363, y: 0.00058499, z: 7.776}
+  m_LocalScale: {x: 1, y: 0.99815, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
@@ -3036,8 +3042,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5433061, y: 1.6315107, z: 1.5768428}
-  m_Center: {x: 0.016768813, y: 0.31575537, z: -0.040244818}
+  m_Size: {x: 1.7554867, y: 1.631514, z: 1.5768428}
+  m_Center: {x: -0.089321494, y: 0.31575534, z: -0.040244818}
 --- !u!4 &1069596678
 Transform:
   m_ObjectHideFlags: 0

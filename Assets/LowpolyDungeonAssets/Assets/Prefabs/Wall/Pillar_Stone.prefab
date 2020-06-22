@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4248846288640394}
   - component: {fileID: 33464483487464712}
   - component: {fileID: 23784135097911738}
-  - component: {fileID: 6597019221073485719}
+  - component: {fileID: -4431394000297278412}
   m_Layer: 0
   m_Name: Pillar_Stone
   m_TagString: Untagged
@@ -80,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &6597019221073485719
-BoxCollider:
+--- !u!64 &-4431394000297278412
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,6 +90,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.3853562, y: 1.9116281, z: 0.3840773}
-  m_Center: {x: -0.000841856, y: 0.95696145, z: 0.0008407831}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: dfe7234da013195408b5f12da6c3c65c, type: 3}

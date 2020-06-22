@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4315287027980304}
   - component: {fileID: 33601925877847920}
   - component: {fileID: 23035898115762924}
-  - component: {fileID: -3417166226852214278}
+  - component: {fileID: 1738058088790040271}
   m_Layer: 0
   m_Name: Wall_Stone_Normal (3)
   m_TagString: Untagged
@@ -80,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &-3417166226852214278
-BoxCollider:
+--- !u!64 &1738058088790040271
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,6 +90,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.1766212, y: 1.4444053, z: 1.9551525}
-  m_Center: {x: 0, y: 0.72169673, z: 0.0000005066395}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: b1d3789359371c749abfc5b437fb5f2f, type: 3}

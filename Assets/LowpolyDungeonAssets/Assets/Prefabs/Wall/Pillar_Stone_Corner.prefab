@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4190063031780046}
   - component: {fileID: 33909298128521962}
   - component: {fileID: 23541876384955750}
-  - component: {fileID: 7059733579062276376}
+  - component: {fileID: -6352329794186543831}
   m_Layer: 0
   m_Name: Pillar_Stone_Corner
   m_TagString: Untagged
@@ -80,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!65 &7059733579062276376
-BoxCollider:
+--- !u!64 &-6352329794186543831
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,6 +90,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.8696859, y: 1.911628, z: 0.9228995}
-  m_Center: {x: 0.019209892, y: 0.9562825, z: -0.015293062}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4300000, guid: 8ad50fa29f738b3409754601e1d250ba, type: 3}
