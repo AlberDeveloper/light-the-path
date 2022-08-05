@@ -6,3 +6,6 @@ Mi first game with Unity 3D
 
 ## Kongregate publish size
 When publish in kongregate set this size: 980 x 600
+
+## Kongregate URL
+https://www.kongregate.com/games/alberdeveloper/light-the-path
